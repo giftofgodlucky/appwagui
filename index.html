@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WAGUI</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="green" role="navigation">
+      <a id="logo-container" href="#" class="brand-logo"><div><img class="logo" src="src/logo.png"/></div></a>
+    <div class="nav-wrapper container">
+      
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Accueil</a></li>
+		<li><a href="#actualite">Actualité</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="#">Partenaires</a></li>
+		<li><a href="#">A propos</a></li>
+		<li><a href="#">Contact</a></li>
+		<li onclick="$('.tap-target').tapTarget('open')" class=""><a href="#modal1" class="waves-effect waves-light btn-success btn-large  " href="#">Connexion</a></li>
+      </ul>
+
+	  
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Accueil</a></li>
+		<li><a href="#">Actualité</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="#">Partenaires</a></li>
+		<li><a href="#">A propos</a></li>
+		<li><a href="#">Contact</a></li>
+		<li ="$('.tap-target').tapTarget('open')" class=""><a id="menu" class="waves-effect waves-light btn btn-floating" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons">cancel</i></a>
+ </li>
+     
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">cancel</i></a>
+    </div>
+  </nav>
+    <!-- Element Showed -->
+  <!-- Tap Target Structure -->
+  <div class="tap-target" data-target="menu">
+    <div class="tap-target-content">
+	
+       
+	      <form id="mail" class="col s9 right" style="position:relative; right:15%;top:0px;">
+            <div class="row"> 
+				<img class="img-log" src="src/logo.png"/>
+			</div>
+			
+			<div class="row" style=" color:#eae7e7;">
+			
+                <div class="input-field input-field-perso col s9">
+                    <i class="material-icons prefix">person</i>
+                    <input id="icon_email" name="email" type="email" class="color-input validate">
+                    <label for="icon_email" class="color-input">Pseudo</label>
+                </div>
+                <div class="input-field input-field-perso  col s9">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="icon_prefix" name="subject" type="password" class="color-input validate">
+                    <label for="icon_prefix" class="color-input">Mot de passe</label>
+                </div> 
+            </div>
+            <div class="row" style="position: relative;right: -20%;">
+                <a href="#" style="width: 60%;background: #006a32;" onclick="send_mail()" class="btn waves-effect waves-light " style="background-color:#36A631; position:relative; bottom:0px" type="submit" name="action">Envoyer
+						 
+					</a>
+            </div>
+			<div class="row" style="position: relative;right: -20%;">
+                <a href="#" style="width: 60%;background:#02c583;" onclick="send_mail()" class="btn waves-effect waves-light " style="background-color:#36A631; position:relative; bottom:0px" type="submit" name="action">S'nscrire
+						 
+					</a>
+            </div>
+			<a href="#"  class="color-input waves-effect waves-light " style="left: 47%; position:relative; bottom:0px" >Mot de passe oublié
+						 
+					</a>
+			
+        </form>
+    
+    </div>
+  </div>
+          
+	<div class="fixed-action-btn">
+  		<a class="btn-floating btn-large green">
+    		<i class="large material-icons">mode_edit</i>
+  		</a>
+  		<ul>
+    		<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+    		<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    		<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    		<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+  		</ul>
+	</div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container container-transparent">
+        <h3 class="header left teal-text text-lighten-1">OPTIMISEZ VOTRE RENDEMENT AGRICOLE GRACE A WAGUI</h3>
+        <div class="row left">
+          <h5 class="header col s12 color-black">Le N°1 des services de conseil et suivi des production agricole au Gabon</h5>
+        </div>  
+        <div class="row center">
+          <a href="#" id="" class="btn-large waves-effect waves-light teal lighten-1">Débuter maintenant</a>
+        </div> 
+
+      </div>
+    </div>
+    <div class="parallax"><img src="src/tea-plantation-1751369_1920.jpg" alt="Unsplashed background img 1"></div>
+	
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+	 <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center green-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Rapide</h5>
+
+            <p class="light">
+			Lorem ipsum dolor sit amet, Ut ac volutpat felis. Aenean maximus, neque sit amet mollis consectetur, ante erat maximus dui, nec aliquet lorem lectus auctor odio. Aliquam erat volutpat. Pellentesque blandit iaculis enim vitae aliquam. 
+			 <br><a href="#" id="" class="btn waves-effect waves-light teal lighten-1">Lire la suite</a>
+      
+			</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center green-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Simple d'utilisation</h5>
+
+          	<p class="light">
+			Lorem ipsum dolor sit amet, Ut ac volutpat felis. Aenean maximus, neque sit amet mollis consectetur, ante erat maximus dui, nec aliquet lorem lectus auctor odio. Aliquam erat volutpat. Pellentesque blandit iaculis enim vitae aliquam. 
+			 <br><a href="#" id="" class="btn waves-effect waves-light teal lighten-1">Lire la suite</a>
+      
+			</p>
+			</div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center green-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Diverses options</h5>
+			<p class="light">
+			Lorem ipsum dolor sit amet, Ut ac volutpat felis. Aenean maximus, neque sit amet mollis consectetur, ante erat maximus dui, nec aliquet lorem lectus auctor odio. Aliquam erat volutpat. Pellentesque blandit iaculis enim vitae aliquam. 
+			 <br><a href="#" id="" class="btn waves-effect waves-light teal lighten-1">Lire la suite</a>
+      
+			</p>
+			
+			</div>
+        </div>
+      </div>
+	
+     
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container container-transparent">
+        <div class="row center">
+			<h3 class="header left teal-text text-lighten-1">WAGUI... L'APPLI QUI REND L'AGRICULTEUR HEUREUX</h3>
+        
+ 		</div>
+      </div>
+    </div>
+    <div class="parallax"><img src="src/tee-1028655_1920.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div id="actualite" class="container ">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s6 ">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>WAGUI EN IMAGES</h4>
+          <p class="left-align light">
+		<div class="carousel">
+    		<a class="carousel-item" href="#one!"><img class="z-depth-3" src="src/Artboard 14.png"></a>
+    		<a class="carousel-item" href="#two!"><img class="z-depth-3" src="src/Artboard 13.png"></a>
+    		<a class="carousel-item" href="#two!"><img class="z-depth-3" src="src/Artboard 16.png"></a> 
+    	</div> </p>
+        </div>
+		<div class="col s6 center">
+		
+		<ul id="tabs-swipe-demo" class="tabs">
+    		<li class="tab col s3"><a class="active" href="#test-swipe-1">Test 1</a></li>
+    		<li class="tab col s3"><a  href="#test-swipe-2">Test 2</a></li>
+    		<li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+  		</ul>
+  		<div id="test-swipe-1" class="col s12 blue">
+			<div class="card">
+        		<div class="card-image">
+          			<img src="src/back1.jpg">
+          			<span class="card-title">Card Title</span>
+          			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        		</div>
+        		<div class="card-content">
+          		<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        		</div>
+      		</div>
+		</div>
+  		<div id="test-swipe-2" class="col s12 red">
+			<div class="card">
+        		<div class="card-image">
+          			<img src="src/tee-1028655_1920.jpg">
+          			<span class="card-title">Card Title</span>
+          			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        		</div>
+        		<div class="card-content">
+          		<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        		</div>
+      		</div>
+		
+		</div>
+  		<div id="test-swipe-3" class="col s12 green">
+		Test 3
+		</div>
+        
+        </div>
+      </div> 
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="src/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+<!-- Modal Structure -->
+		  <div id="modal1" class="modal" style="">
+			<div class="modal-content">
+			  <div class="col s8 m4 l1  center"><img src="img/logo.png" width="70"/><a href="index.html" class="brand-logo"></a></div>
+			 <form class="col s8 center" style="position:relative;top:0px;">
+				  <div class="row" style=" color:#eae7e7;">
+					
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">mail</i>
+					  <input id="icon_email" type="email" class="validate">
+					  <label for="icon_email">Email</label>
+					</div>
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">lock</i>
+					  <input id="icon_lock" type="text" class="validate">
+					  <label for="icon_lock">Password</label>
+					</div>
+				  </div>
+				  <div class="row" style="">
+					<button class="btn-large waves-effect waves-light"  style="background-color:white; color:#36A631;; position:relative; bottom:0px" type="submit" >Quitter
+						<i class="material-icons right">close</i>
+					</button>
+					<button class="btn-large waves-effect "  style="background-color:#36A631; position:relative; bottom:0px" type="submit" name="action">Valider
+						<i class="material-icons right">send</i>
+					</button>
+					
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+			  <a href="#!" onclick="#" class="modal-action waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		  </div>
+	
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
